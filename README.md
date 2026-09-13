@@ -1,5 +1,7 @@
 # Journal de lecture d'Auguste
 
+Application de lecture pour la classe de P3.
+
 Une petite application web pour suivre les temps de lecture d'un enfant, semaine
 par semaine. Conçue pour être installée sur une tablette comme une vraie
 application, sans passer par un store.

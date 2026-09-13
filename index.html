@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#2f6fb8">
+<meta name="description" content="Journal de lecture d'Auguste - suis tes temps de lecture chaque semaine">
+<title>Journal de lecture d'Auguste</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app-container">
+
+  <header class="app-header">
+    <h1>📖 Journal de lecture d'Auguste</h1>
+  </header>
+
+  <main class="panels">
+
+    <section class="panel panel-left" aria-label="Tableau de la semaine">
+      <div class="week-nav">
+        <button id="prev-week" class="arrow-btn" aria-label="Semaine précédente" type="button">&#9664;</button>
+        <div class="week-label" id="week-label">Semaine du ... au ...</div>
+        <button id="next-week" class="arrow-btn" aria-label="Semaine suivante" type="button">&#9654;</button>
+      </div>
+
+      <table class="reading-table">
+        <thead>
+          <tr>
+            <th>Jour</th>
+            <th>Temps de lecture</th>
+            <th>Livre(s) lu(s)</th>
+          </tr>
+        </thead>
+        <tbody id="week-table-body">
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Total</td>
+            <td id="week-total">0 min</td>
+            <td></td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <section class="panel panel-right" aria-label="Lecture en cours">
+      <div class="current-book-label" id="current-book-label">Aucun livre sélectionné</div>
+
+      <div class="timer-display" id="timer-display">00:00</div>
+
+      <div class="controls">
+        <button id="start-btn" class="btn btn-start" type="button">&#9654; Start</button>
+        <button id="pause-btn" class="btn btn-pause" type="button">&#10073;&#10073; Pause</button>
+        <button id="stop-btn" class="btn btn-stop" type="button">&#9632; Stop</button>
+      </div>
+
+      <div class="book-select-wrap">
+        <label for="book-select">Livre en cours :</label>
+        <select id="book-select"></select>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<div class="modal-overlay" id="new-book-modal" hidden>
+  <div class="modal">
+    <h2>Nouveau livre</h2>
+    <label for="new-book-title">Titre du livre :</label>
+    <input type="text" id="new-book-title" maxlength="80" autocomplete="off">
+    <div class="modal-actions">
+      <button id="cancel-new-book" class="btn btn-secondary" type="button">Annuler</button>
+      <button id="confirm-new-book" class="btn btn-start" type="button">Ajouter</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
